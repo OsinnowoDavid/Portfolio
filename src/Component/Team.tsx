@@ -2,7 +2,7 @@ import { Code2, Palette, Server, Users, Linkedin, Github, Mail } from "lucide-re
 import David from "../assets/Images/David.jpeg"
 
 const Team =()=> {
-  const teamMembers = [
+  const teamMembers  = [
     {
       name: "Osinnowo David",
       role: "Full-Stack Developer",
@@ -14,7 +14,7 @@ const Team =()=> {
     {
       name: "Omoteyinshe Daniel",
       role: "Frontend Developer",
-      image: {David},
+      image: David, // ✅ Fixed: was {David}
       bio: "Creative frontend developer specializing in React and modern JavaScript. Focused on creating beautiful, performant user interfaces.",
       skills: ["React", "Next.js", "Tailwind CSS", "Animation", "Responsive Design"],
       icon: Code2,
@@ -22,7 +22,7 @@ const Team =()=> {
     {
       name: "Michael Chen",
       role: "Backend Developer",
-      image: {David},
+      image: David, // ✅ Fixed: was {David}
       bio: "Backend specialist with deep knowledge of API design, database optimization, and microservices architecture. Security-first mindset.",
       skills: ["Node.js", "Python", "MongoDB", "GraphQL", "Docker"],
       icon: Server,
@@ -30,7 +30,7 @@ const Team =()=> {
     {
       name: "Emily Rodriguez",
       role: "UI/UX Designer",
-      image:David,
+      image: David,
       bio: "User-centered designer with a passion for creating intuitive, accessible interfaces. Expert in design systems and user research.",
       skills: ["Figma", "User Research", "Prototyping", "Design Systems", "Accessibility"],
       icon: Palette,
