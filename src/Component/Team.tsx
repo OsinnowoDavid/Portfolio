@@ -1,5 +1,7 @@
 import { Code2, Palette, Server, Users, Linkedin, Github, Mail } from "lucide-react";
 import David from "../assets/Images/David.jpeg"
+import Owen from "../assets/Images/Owen.jpeg"
+import Daniel from "../assets/Images/Daniel.jpeg"
 
 const Team =()=> {
   const teamMembers  = [
@@ -11,22 +13,23 @@ const Team =()=> {
       skills: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"],
       icon: Code2,
     },
-    {
+     {
       name: "Omoteyinshe Daniel",
-      role: "Frontend Developer",
-      image: David, // ✅ Fixed: was {David}
-      bio: "Creative frontend developer specializing in React and modern JavaScript. Focused on creating beautiful, performant user interfaces.",
-      skills: ["React", "Next.js", "Tailwind CSS", "Animation", "Responsive Design"],
-      icon: Code2,
-    },
-    {
-      name: "Michael Chen",
       role: "Backend Developer",
-      image: David, // ✅ Fixed: was {David}
+      image: Daniel, // ✅ Fixed: was {David}
       bio: "Backend specialist with deep knowledge of API design, database optimization, and microservices architecture. Security-first mindset.",
       skills: ["Node.js", "Python", "MongoDB", "GraphQL", "Docker"],
       icon: Server,
     },
+    {
+      name: "Owen Erhabor",
+      role: "Frontend Developer",
+      image: Owen, // ✅ Fixed: was {David}
+      bio: "Creative frontend developer specializing in React and modern JavaScript. Focused on creating beautiful, performant user interfaces.",
+      skills: ["React", "Next.js", "Tailwind CSS", "Animation", "Responsive Design"],
+      icon: Code2,
+    },
+   
     {
       name: "Emily Rodriguez",
       role: "UI/UX Designer",
@@ -89,11 +92,11 @@ const Team =()=> {
                   className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
                   {/* Member Photo */}
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover pt-5"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">

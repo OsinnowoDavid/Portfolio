@@ -30,8 +30,7 @@ const Hero: React.FC = () => {
       className="relative mt-32 pt-20 pb-16 overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -66,14 +65,20 @@ const Hero: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-[#eb5e28] text-white font-semibold rounded-lg shadow-lg hover:bg-[#d94f1e] transition-colors"
               >
+                <a href="https://wa.me/2348135880678">
                 Get Started
+
+                </a>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
               >
+                <a href="https://wa.me/2348135880678">
                 Free consultation
+                
+                </a>
               </motion.button>
             </motion.div>
 
