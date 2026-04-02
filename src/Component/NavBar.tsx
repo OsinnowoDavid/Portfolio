@@ -1,7 +1,6 @@
 import  { useState } from 'react';
 import logo from "../assets/Images/Logo.png"
 import office from "../assets/Images/office.jpeg"
-import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
