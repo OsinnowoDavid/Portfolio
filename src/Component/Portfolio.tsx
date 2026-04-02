@@ -1,11 +1,14 @@
-import { ExternalLink, Smartphone, Globe, ShoppingCart } from "lucide-react";
+import {  Smartphone, Globe, ShoppingCart } from "lucide-react";
+import frame2 from "../assets/Images/frame.jpeg"
+import ecommercer from "../assets/Images/ecommerce.jpeg"
+import finTech from "../assets/Images/fintech.jpeg"
 export function Portfolio() {
   const projects = [
     {
       title: "FinTech Mobile App",
       category: "Mobile App",
       description: "A comprehensive financial management app with real-time market data, portfolio tracking, and AI-powered investment recommendations.",
-      image: "https://images.unsplash.com/photo-1762341119237-98df67c9c3c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMHNjcmVlbnxlbnwxfHx8fDE3NzM4MjE5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: frame2,
       technologies: ["React Native", "Node.js", "PostgreSQL", "AWS"],
       icon: Smartphone,
     },
@@ -13,7 +16,7 @@ export function Portfolio() {
       title: "E-commerce Platform",
       category: "Web Application",
       description: "A scalable e-commerce solution with advanced filtering, personalized recommendations, and seamless checkout experience.",
-      image: "https://images.unsplash.com/photo-1540397106260-e24a507a08ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZyUyMGxhcHRvcHxlbnwxfHx8fDE3NzM5MzM1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: ecommercer,
       technologies: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
       icon: ShoppingCart,
     },
@@ -29,15 +32,15 @@ export function Portfolio() {
       title: "Fitness Tracking App",
       category: "Mobile App",
       description: "Cross-platform fitness app with workout tracking, nutrition planning, and social features to keep users motivated and engaged.",
-      image: "https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MzkzNjc0Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "https://images.unsplash.com/photo-1762341119237-98df67c9c3c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMHNjcmVlbnxlbnwxfHx8fDE3NzM4MjE5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       technologies: ["Flutter", "Firebase", "Cloud Functions", "ML Kit"],
       icon: Smartphone,
     },
     {
-      title: "Real Estate Portal",
-      category: "Web Application",
+      title: "Flight Booking App",
+      category: "life style",
       description: "Modern property listing platform with virtual tours, advanced search filters, and integrated CRM for real estate agencies.",
-      image: "https://images.unsplash.com/photo-1664382951070-70a6e4ef8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BlcnMlMjB0ZWFtd29yayUyMG9mZmljZXxlbnwxfHx8fDE3NzM5MzY3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: finTech,
       technologies: ["Vue.js", "Laravel", "MySQL", "Google Maps API"],
       icon: Globe,
     },
@@ -77,14 +80,14 @@ export function Portfolio() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow group"
+                  className="bg-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow group"
                 >
                   {/* Project Image */}
                   <div className="relative overflow-hidden h-64">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className=" h-full justify-center items-center-safe object-cover p-10 group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -114,9 +117,9 @@ export function Portfolio() {
                       ))}
                     </div>
 
-                    <button className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors font-semibold">
+                    {/* <button className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors font-semibold">
                       View Details <ExternalLink className="ml-2 w-4 h-4" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               );

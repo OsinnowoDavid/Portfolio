@@ -95,7 +95,7 @@ const Services= () =>{
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-20">
+      <section className="bg-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -187,7 +187,9 @@ const Services= () =>{
             Ready to start your project? Get in touch with us today for a free consultation.
           </p>
           <a
-            href="/contact"
+            href="https://wa.me/2348135880678"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center bg-orange-600 text-white px-8 py-3 rounded-md hover:bg-orange-700 transition-colors font-semibold"
           >
             Get a Free Quote

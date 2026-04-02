@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import logo from "../assets/Images/Logo.png"
 import office from "../assets/Images/office.jpeg"
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
@@ -111,13 +112,15 @@ const Navbar = () => {
         </div>
 
         {/* Ride Now Button */}
-        <button className="relative hidden md:block bg-[#eb5e28] text-white  font-medium text-lg py-3 px-8 rounded-full overflow-hidden group">
-          <span className="relative z-10">Ride Now</span>
-          <span
-            className="absolute w-[17px] h-[292px] bg-white/10 rotate-[21.9deg] left-[147px] -top-[56px] -z-10"
-            aria-hidden="true"
-          />
+        <a href="https://wa.me/2348135880678" target="_blank" rel="noopener noreferrer">
+          <button className="relative hidden md:block bg-[#eb5e28] text-white  font-medium text-lg py-3 px-8 rounded-full overflow-hidden group">
+            <span className="relative z-10">Free consultation </span>
+            <span
+              className="absolute w-[17px] h-[292px] bg-white/10 rotate-[21.9deg] left-[147px] -top-[56px] -z-10"
+              aria-hidden="true"
+            />
         </button>
+        </a>
 
         {/* Mobile menu button */}
         <button

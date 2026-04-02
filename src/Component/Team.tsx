@@ -2,6 +2,7 @@ import { Code2, Palette, Server, Users, Linkedin, Github, Mail } from "lucide-re
 import David from "../assets/Images/David.jpeg"
 import Owen from "../assets/Images/Owen.jpeg"
 import Daniel from "../assets/Images/Daniel.jpeg"
+import office from "../assets/Images/office.jpeg"
 
 const Team =()=> {
   const teamMembers  = [
@@ -217,7 +218,7 @@ const Team =()=> {
                 </li>
               </ul>
               <a
-                href="/contact"
+                href="https://wa.me/2348135880678"
                 className="inline-flex items-center bg-orange-600 text-white px-8 py-3 rounded-md hover:bg-orange-700 transition-colors font-semibold"
               >
                 Get in Touch
@@ -226,7 +227,7 @@ const Team =()=> {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1664382951070-70a6e4ef8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BlcnMlMjB0ZWFtd29yayUyMG9mZmljZXxlbnwxfHx8fDE3NzM5MzY3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={office}
                 alt="Team collaboration"
                 className="rounded-lg shadow-2xl"
               />
