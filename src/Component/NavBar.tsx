@@ -14,6 +14,8 @@ const Navbar = () => {
           <img src={logo} className='object-cover w-40'></img>
         </div>
 
+        
+
         {/* Desktop Navigation - hidden on mobile */}
         <div className="hidden md:flex items-center gap-12">
           <a href="/rider" className="text-[#2D2D2D]  font-medium text-lg hover:text-[#eb5e28] transition">

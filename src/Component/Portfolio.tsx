@@ -1,8 +1,9 @@
 import {  Smartphone, Globe, ShoppingCart } from "lucide-react";
 import frame2 from "../assets/Images/frame.jpeg"
 import ecommercer from "../assets/Images/ecommerce.jpeg"
-import finTech from "../assets/Images/fintech.jpeg"
+import finTech from "../assets/Images/finTech.jpeg"
 export function Portfolio() {
+  
   const projects = [
     {
       title: "FinTech Mobile App",
