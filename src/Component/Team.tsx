@@ -31,14 +31,7 @@ const Team =()=> {
       icon: Code2,
     },
    
-    {
-      name: "Emily Rodriguez",
-      role: "UI/UX Designer",
-      image: David,
-      bio: "User-centered designer with a passion for creating intuitive, accessible interfaces. Expert in design systems and user research.",
-      skills: ["Figma", "User Research", "Prototyping", "Design Systems", "Accessibility"],
-      icon: Palette,
-    },
+
   ];
 
   const values = [
@@ -93,7 +86,7 @@ const Team =()=> {
                   className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
                   {/* Member Photo */}
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-80 p-1 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
