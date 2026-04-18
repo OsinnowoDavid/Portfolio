@@ -1,5 +1,5 @@
 import { Smartphone, Globe, ShoppingCart, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useState, type ComponentType, type ReactElement } from "react";
 import frame2 from "../assets/Images/frame.jpeg";
 import ecommercer from "../assets/Images/ecommerce.jpeg";
 import finTech from "../assets/Images/finTech.jpeg";
@@ -11,7 +11,7 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
   bgColor: string;
 }
 
@@ -19,7 +19,7 @@ interface LoadingState {
   [key: number]: boolean;
 }
 
-export function Portfolio(): JSX.Element {
+export function Portfolio(): ReactElement {
   const [loadedImages, setLoadedImages] = useState<LoadingState>({});
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
