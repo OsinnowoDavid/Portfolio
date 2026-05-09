@@ -92,10 +92,10 @@ export function Portfolio(): ReactElement {
   }
 
   const stats: Stat[] = [
-    { value: "50+", label: "Projects Completed", icon: "🚀" },
+    { value: "20+", label: "Projects Completed", icon: "🚀" },
     { value: "100%", label: "Client Satisfaction", icon: "⭐" },
-    { value: "30+", label: "Happy Clients", icon: "😊" },
-    { value: "10+", label: "Years Experience", icon: "🏆" },
+    { value: "10+", label: "Happy Clients", icon: "😊" },
+    { value: "5+", label: "Years Experience", icon: "🏆" },
   ];
 
   return (
@@ -250,7 +250,7 @@ export function Portfolio(): ReactElement {
             Let's discuss how we can help you build your next great application.
           </p>
           <a
-            href="/contact"
+            href="mailto:davidadewale151@gmail.com"
             className="inline-flex items-center bg-orange-600 text-white px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Get in Touch

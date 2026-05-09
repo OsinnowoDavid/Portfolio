@@ -6,7 +6,7 @@ const Navbar = () => {
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm border-b border-white/10 z-50"
+    <nav className=" top-0 left-0 w-full h-5 absolute bg-white/80 backdrop-blur-sm border-b border-white/10 z-50"
     >
       <div className="flex items-center justify-between px-4 sm:px-8 md:px-20 py-4 max-w-7xl mx-auto">
         {/* Logo */}
@@ -28,7 +28,7 @@ const Navbar = () => {
             Portfolio
           </a>
           {/* Company with dropdown */}
-          <a href="/company">
+          <a>
 
           <div
             className="relative"
@@ -85,7 +85,8 @@ const Navbar = () => {
                     </div>
 
                     {/* Contact */}
-                    <div>
+                    <a href="https://wa.me/2348135880678">
+                    <div >
                       <h4 className=" font-medium text-[19px] leading-[28px] text-[#2D2D2D]">
                         Contact
                       </h4>
@@ -93,16 +94,17 @@ const Navbar = () => {
                         Reach out to our team.
                       </p>
                     </div>
+                    </a>
 
                     {/* FAQ */}
-                    <div>
+                    {/* <div>
                       <h4 className=" font-medium text-[19px] leading-[28px] text-[#2D2D2D]">
                         FAQ
                       </h4>
                       <p className=" font-normal text-[15px] leading-[22px] text-[#5A5A5A] mt-0.5">
                         Find answers to common questions.
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

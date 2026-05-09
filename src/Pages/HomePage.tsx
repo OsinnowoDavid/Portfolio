@@ -6,13 +6,14 @@ import  Team  from "../Component/Team"
 function HomePage() {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Service/>
-    <Portfolio/>
-    <Team/>
+      <Navbar />
+      <main>
+        <Hero />
+        <Service />
+        <Portfolio />
+        <Team />
+      </main>
     </>
-
   )
 }
 

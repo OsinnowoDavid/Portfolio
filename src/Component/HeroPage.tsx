@@ -65,8 +65,8 @@ const Hero: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-[#eb5e28] text-white font-semibold rounded-lg shadow-lg hover:bg-[#d94f1e] transition-colors"
               >
-                <a href="https://wa.me/2348135880678">
-                Get Started
+                <a href="mailto:davidadewale151@gmail.com">
+                Get Started with mail
 
                 </a>
               </motion.button>
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
                 className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
               >
                 <a href="https://wa.me/2348135880678">
-                Free consultation
+                Free consultation with whatsApp
                 
                 </a>
               </motion.button>
