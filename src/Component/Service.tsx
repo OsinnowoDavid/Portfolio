@@ -32,7 +32,7 @@ export function Services() {
       <motion.div 
         className="flex gap-[15px] md:gap-[20px]"
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
       >
         {[...cards, ...cards].map((card, i) => (
           <ProjectCard key={i} {...card} />

@@ -5,11 +5,11 @@ export function Hero() {
       
       {/* Text Container */}
       <div className="flex flex-col items-center gap-[24px] max-w-[938px]">
-        <h1 className=" font-bold text-[60px] lg:text-[60px] md:text-[64px] leading-[1.2] text-[#0F1115]">
+        <h1 className=" font-bold text-[25px] lg:text-[60px] md:text-[32px] leading-[1.2] text-[#0F1115] sm:text-[18px] ">
           We Design and Build Products That Shape the Future.
         </h1>
-        <p className=" font-medium text-[24px] md:text-[24px] leading-[1.2] text-[#323745]">
-          From strategy to launch, we build modern digital products designed for<br/> performance and growth.
+        <p className=" font-medium text-[15px] md:text-[24px] leading-[1.2] text-[#323745]">
+          From strategy to launch, we build modern digital products designed for performance and growth.
         </p>
       </div>
 
