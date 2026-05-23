@@ -7,12 +7,12 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <main>
+ 
         <Hero />
         <Service />
         <Portfolio />
         <Team />
-      </main>
+     
     </>
   )
 }
