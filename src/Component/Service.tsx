@@ -24,6 +24,8 @@ export function Services() {
     { title: "Sample 1", type: "Web app", year: "2025" },
     { title: "Sample 2", type: "Web app", year: "2025" },
     { title: "Sample 3", type: "Web app", year: "2025" },
+    { title: "Sample 3", type: "Web app", year: "2025" },
+    { title: "Sample 3", type: "Web app", year: "2025" },
   ];
 
   return (
@@ -32,7 +34,7 @@ export function Services() {
       <motion.div 
         className="flex gap-[15px] md:gap-[20px]"
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+        transition={{ duration: 2, ease: "linear", repeat: Infinity }}
       >
         {[...cards, ...cards].map((card, i) => (
           <ProjectCard key={i} {...card} />

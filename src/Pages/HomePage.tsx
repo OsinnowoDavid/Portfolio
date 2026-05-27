@@ -1,8 +1,13 @@
 import Navbar from "../Component/NavBar"
 import Hero from "../Component/HeroPage"
 import Service from "../Component/Service"
-import { Portfolio } from "../Component/Portfolio"
-import  Team  from "../Component/Team"
+
+import ServiceShowcase from "../Component/ServiceSection"
+import ProjectsSection from "../Component/ProjectCard"
+import ProcessSection from "../Component/ProcessSection"
+import TeamSection from "../Component/TeamSection"
+import ConsultationSection from "../Component/ConsultationSection"
+import Footer from "../Component/Footer"
 function HomePage() {
   return (
     <>
@@ -10,8 +15,14 @@ function HomePage() {
  
         <Hero />
         <Service />
-        <Portfolio />
-        <Team />
+        <ServiceShowcase/>
+        <ProjectsSection/>
+        <ProcessSection/>
+        <TeamSection/>
+        <ConsultationSection/>
+        <Footer/>
+        {/* <Portfolio /> */}
+        {/* <Team /> */}
      
     </>
   )
