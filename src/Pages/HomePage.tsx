@@ -13,13 +13,19 @@ function HomePage() {
     <>
       <Navbar />
  
-        <Hero />
-        <Service />
-        <ServiceShowcase/>
+        <section id="services">
+          <Hero />
+          <Service />
+          <ServiceShowcase/>
+        </section>
         <ProjectsSection/>
-        <ProcessSection/>
+        <section id="process">
+          <ProcessSection/>
+        </section>
         <TeamSection/>
-        <ConsultationSection/>
+        <section id="contact">
+          <ConsultationSection/>
+        </section>
         <Footer/>
         {/* <Portfolio /> */}
         {/* <Team /> */}

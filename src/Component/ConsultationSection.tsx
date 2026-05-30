@@ -23,7 +23,7 @@ const ConsultationSection: React.FC = () => {
               
               {/* CTA Button */}
               <div className="flex justify-center lg:justify-start mt-2 sm:mt-4">
-                <button className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[#F1F1F1] rounded-full hover:scale-105 transition-all duration-300 hover:shadow-xl w-full sm:w-auto">
+                <a href='https://wa.me/2348135880678' className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[#F1F1F1] rounded-full hover:scale-105 transition-all duration-300 hover:shadow-xl w-full sm:w-auto">
                   <span className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-semibold text-[#0F1115]">
                     Book free consultation
                   </span>
@@ -41,7 +41,7 @@ const ConsultationSection: React.FC = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>

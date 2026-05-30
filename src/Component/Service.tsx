@@ -32,7 +32,7 @@ export function Services() {
   ];
 
   const cardWidth = 587;
-  const gap = 20;
+  const gap = 25;
   const totalWidth = (cardWidth + gap) * cards.length;
 
   return (

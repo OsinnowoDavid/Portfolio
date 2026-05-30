@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { name: 'Services', href: '#' },
-  { name: 'Process', href: '#' },
-  { name: 'Contact us', href: '#' },
+  { name: 'Services', href: '#services' },
+  { name: 'Process', href: '#process' },
+  { name: 'Contact us', href: '#contact' },
 ];
 
 export function Navbar() {
@@ -20,17 +20,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
+
 
   // Inject body padding styles
   useEffect(() => {
@@ -50,6 +40,9 @@ export function Navbar() {
           padding-top: 110px;
         }
       }
+      html {
+        scroll-behavior: smooth;
+      }
     `;
     document.head.appendChild(style);
     return () => {
@@ -57,10 +50,23 @@ export function Navbar() {
     };
   }, []);
 
-  // Close mobile menu when clicking a link
-  const handleLinkClick = (linkName: string) => {
+  // Close mobile menu when clicking a link and scroll to section
+  const handleLinkClick = (linkName: string, href: string) => {
     setActive(linkName);
     setIsMenuOpen(false);
+    
+    // Smooth scroll to section
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 120; // Offset for fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -86,7 +92,10 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setActive(link.name)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(link.name, link.href);
+                }}
                 className={`text-lg xl:text-[24px] transition-colors duration-300 cursor-pointer whitespace-nowrap ${
                   active === link.name 
                     ? 'text-[#F1F1F1] font-bold' 
@@ -99,7 +108,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA Button */}
-          <button className="hidden lg:flex items-center gap-2 py-2 px-4 xl:py-3 xl:px-6 bg-[#F1F1F1] rounded-full hover:scale-105 transition-transform flex-shrink-0">
+          <a href="mailto:davidadewale151@gmail.com" className="hidden lg:flex items-center gap-2 py-2 px-4 xl:py-3 xl:px-6 bg-[#F1F1F1] rounded-full hover:scale-105 transition-transform flex-shrink-0">
             <span className="font-semibold text-base xl:text-[24px] text-[#0F1115] whitespace-nowrap">
               Book a Call
             </span>
@@ -119,7 +128,7 @@ export function Navbar() {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button 
@@ -145,9 +154,11 @@ export function Navbar() {
         <>
           {/* Backdrop with fade */}
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 lg:hidden"
+            className="fixed inset-0 z-40 transition-opacity duration-300 lg:hidden menu-backdrop"
             onClick={() => setIsMenuOpen(false)}
-            style={{ animation: 'fadeIn 0.3s ease-out' }}
+            style={{ 
+              animation: 'fadeIn 0.3s ease-out'
+            }}
           />
           
           {/* Mobile Menu - Slides from Left */}
@@ -179,7 +190,10 @@ export function Navbar() {
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={() => handleLinkClick(link.name)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick(link.name, link.href);
+                    }}
                     className={`text-lg py-3 px-4 rounded-xl transition-all duration-300 ${
                       active === link.name 
                         ? 'text-[#F1F1F1] font-bold bg-white/10' 
@@ -193,7 +207,7 @@ export function Navbar() {
 
               {/* Menu Footer */}
               <div className="p-6 border-t border-white/10">
-                <button className="w-full bg-[#F1F1F1] px-6 py-3 rounded-full font-bold text-[#0F1115] flex items-center justify-center gap-2 hover:scale-105 transition-transform">
+                <a href='https://wa.me/2348135880678' className="w-full bg-[#F1F1F1] px-6 py-3 rounded-full font-bold text-[#0F1115] flex items-center justify-center gap-2 hover:scale-105 transition-transform">
                   <span>Book a Call</span>
                   <svg 
                     width="20" 
@@ -210,7 +224,7 @@ export function Navbar() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -234,6 +248,16 @@ export function Navbar() {
           }
           to {
             transform: translateX(0);
+          }
+        }
+
+        .menu-backdrop {
+          background: linear-gradient(to right, transparent 0px, transparent 280px, rgba(0,0,0,0.5) 280px);
+        }
+        
+        @media (min-width: 640px) {
+          .menu-backdrop {
+            background: linear-gradient(to right, transparent 0px, transparent 320px, rgba(0,0,0,0.5) 320px);
           }
         }
       `}</style>

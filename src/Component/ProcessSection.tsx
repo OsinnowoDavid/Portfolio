@@ -169,10 +169,10 @@ const ProcessSection: React.FC = () => {
         {/* Enhanced Call to Action */}
         <div className="mt-10 md:mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button className="px-6 sm:px-8 py-3 bg-[#0F1115] text-white rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-              <span>Start Your Project</span>
+            <a href='https://wa.me/2348135880678' className="px-6 sm:px-8 py-3 bg-[#0F1115] text-white rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg group">
+              <span>Start Your Project </span>
               <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </button>
+            </a>
         
           </div>
         </div>
