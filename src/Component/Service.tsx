@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
+import image1 from "../assets/Images/finTech.png"
+import image2 from "../assets/Images/banking.png"
+import image3 from "../assets/Images/RealEstate.png"
+import image4 from "../assets/Images/health.png"
 
-const ProjectCard = ({ title, type, year }: { title: string, type: string, year: string }) => (
+const ProjectCard = ({ title, type, year ,Image}: { title: string, type: string, year: string , Image:string}) => (
   // Responsively scale the card: from 300px width on mobile to 587px on desktop
   <div className="relative w-[300px] h-[300px] md:w-[587px] md:h-[556px] bg-[#F9F9F9] border border-[#D9D9D9] rounded-[30px] md:rounded-[60px] flex-shrink-0">
     
     {/* Inner Image Placeholder - Responsive sizing */}
-    <div className="absolute top-[10px] left-[12px] md:top-[20px] md:left-[24px] w-[276px] h-[170px] md:w-[539px] md:h-[337px] bg-white border border-[#323745] rounded-[30px] md:rounded-[60px]" />
+    <img src={Image} className="absolute top-[10px] left-[12px] md:top-[20px] md:left-[24px] w-[276px] h-[170px] md:w-[539px] md:h-[337px] object-cover bg-white border border-[#323745] rounded-[30px] md:rounded-[60px]" />
     
     {/* Text Info */}
     <div className="absolute top-[200px] left-[20px] md:top-[386px] md:left-[24px] flex flex-col gap-[5px] md:gap-[20px]">
@@ -21,20 +25,30 @@ const ProjectCard = ({ title, type, year }: { title: string, type: string, year:
 
 export function Services() {
   const cards = [
-    { title: "Sample 1", type: "Web app", year: "2025" },
-    { title: "Sample 2", type: "Web app", year: "2025" },
-    { title: "Sample 3", type: "Web app", year: "2025" },
-    { title: "Sample 3", type: "Web app", year: "2025" },
-    { title: "Sample 3", type: "Web app", year: "2025" },
+    { title: "FinTech Mobile App", type: "Mobile app", year: "2025", Image: image1 },
+    { title: "E-commerce Platform", type: "Web app", year: "2024", Image: image2 },
+    { title: "Real Estate Platform", type: "Mobile app", year: "2024", Image: image3 },
+    { title: "Real Estate Platform", type: "Mobile app", year: "2026", Image: image4 },
   ];
 
+  const cardWidth = 587;
+  const gap = 20;
+  const totalWidth = (cardWidth + gap) * cards.length;
+
   return (
-    // Responsive container padding
     <div className="w-full overflow-hidden py-8 md:py-16 bg-white">
       <motion.div 
-        className="flex gap-[15px] md:gap-[20px]"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 2, ease: "linear", repeat: Infinity }}
+        className="flex gap-[20px]"
+        animate={{ 
+          x: [0, -totalWidth] 
+        }}
+        transition={{ 
+          duration: 15, 
+          ease: "linear", 
+          repeat: Infinity,
+          repeatType: "loop"
+        }}
+        style={{ width: "max-content" }}
       >
         {[...cards, ...cards].map((card, i) => (
           <ProjectCard key={i} {...card} />
