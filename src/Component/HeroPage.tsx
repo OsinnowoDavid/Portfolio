@@ -1,7 +1,7 @@
 
 export function Hero() {
   return (
-    <section className="w-full mt-20 px-4 py-20 flex flex-col items-center justify-center gap-[40px] text-center">
+    <section className="w-full mt-10 px-4 py-10 flex flex-col items-center justify-center gap-[40px] text-center">
       
       {/* Text Container */}
       <div className="flex flex-col items-center gap-[24px] max-w-[938px]">
