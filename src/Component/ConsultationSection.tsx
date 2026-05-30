@@ -1,5 +1,5 @@
 import React from 'react';
-import office from "../assets/Images/office.jpeg"
+import office from "../assets/Images/meeting.png"
 const ConsultationSection: React.FC = () => {
   return (
     <section className="w-full bg-[#0F1115] py-16 sm:py-20 md:py-24 lg:py-[80px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[82px]">
