@@ -9,7 +9,7 @@ const ProjectCard = ({ title, type, year ,Image}: { title: string, type: string,
   <div className="relative w-[300px] h-[300px] md:w-[587px] md:h-[556px] bg-[#F9F9F9] border border-[#D9D9D9] rounded-[30px] md:rounded-[60px] flex-shrink-0">
     
     {/* Inner Image Placeholder - Responsive sizing */}
-    <img src={Image} className="absolute top-[10px] left-[12px] md:top-[20px] md:left-[24px] w-[276px] h-[170px] md:w-[539px] md:h-[337px] object-cover bg-white border border-[#323745] rounded-[30px] md:rounded-[60px]" />
+    <img src={Image} className="absolute top-[10px] left-[12px] md:top-[20px] md:left-[24px] w-[276px] h-[170px] md:w-[539px] md:h-[337px] object-cover  rounded-[30px] md:rounded-[60px]" />
     
     {/* Text Info */}
     <div className="absolute top-[200px] left-[20px] md:top-[386px] md:left-[24px] flex flex-col gap-[5px] md:gap-[20px]">

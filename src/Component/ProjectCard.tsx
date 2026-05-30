@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   
 
       {/* Content */}
-      <div className="flex flex-col gap-3 sm:gap-4 md:gap-[17px] flex-1">
+      <div className="flex flex-col gap-3 sm:gap-2 md:gap-[17px] flex-1">
         {/* Title and Description */}
         <div className="flex flex-col gap-1.5 sm:gap-2">
           <h3 className="text-xl sm:text-2xl md:text-[28px] font-medium leading-tight md:leading-[34px] text-[#0F1115]">
