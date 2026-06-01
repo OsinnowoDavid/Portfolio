@@ -18,18 +18,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
 }) => {
   return (
-    <div className="bg-[#F9F9F9] border border-[#D9D9D9] rounded-xl p-3 sm:p-4 flex flex-col gap-4 sm:gap-6 md:gap-8 h-auto md:h-[545px] w-full hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-[#F9F9F9] border border-[#D9D9D9] rounded-xl p-3 sm:p-4 flex flex-col gap-4 sm:gap-3 md:gap-8 h-auto md:h-[545px] w-full hover:shadow-xl transition-shadow duration-300">
       {/* Image Placeholder */}
       <img 
-        className="w-full h-[180px] sm:h-[200px] md:h-[240px] object-cover flex items-center justify-center"
+        className="w-full h-[180px] sm:h-[200px] md:h-[240px] object-cover"
         src={image}
-      >
-        </img>
-        <div className="text-white text-center px-4">
-          <p className="text-sm sm:text-base">Project Preview</p>
-          <p className="text-xs sm:text-sm opacity-80 mt-2">{title}</p>
-        </div>
-  
+        alt={`${title} - Project showcase`}
+      />
+      <div className="text-white text-center px-4">
+        <p className="text-xs sm:text-sm opacity-80 mt-2">{title}</p>
+      </div>
+
 
       {/* Content */}
       <div className="flex flex-col gap-3 sm:gap-2 md:gap-[17px] flex-1">
@@ -105,10 +104,10 @@ const ProjectsSection: React.FC = () => {
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="max-w-[1276px] mx-auto">
         {/* Projects Grid */}
-        <div className='mb-3 text-[48px] font-bold'>Our Projects</div>
+        <h2 className='mb-3 text-[48px] font-bold text-[#0F1115]'>Our Projects</h2>
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
           {/* Row 1 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {projectsData.row1.map((project, index) => (
               <ProjectCard key={`row1-${index}`} {...project} />
             ))}
